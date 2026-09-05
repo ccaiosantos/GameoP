@@ -48,7 +48,7 @@
   --spacing-3xl: 4rem;
 
   /* Tipografia */
-  --font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-family: "Inter", sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;

@@ -1,17 +1,15 @@
-import { seedGamesIfEmpty, getAllGames } from "../services/storageService";
 import { useState, useEffect, useCallback } from "react";
+import { getAllGames, searchGames } from "../services/storageService";
 
-
-//Embaralha os jogos em ordem diferente toda vez que o site é iniciado
-function shuffleArray(array){
-    const copy = [...array];
-      for (let index = copy.length - 1; index > 0; index--) {
+function shuffleArray(array) {
+  const copy = [...array];
+  for (let index = copy.length - 1; index > 0; index--) {
     const randomIndex = Math.floor(Math.random() * (index + 1));
     [copy[index], copy[randomIndex]] = [copy[randomIndex], copy[index]];
   }
   return copy;
 }
-// Retorna todos os jogos, já embaralhados
+
 export function useGames() {
   const [games, setGames] = useState([]);
 
@@ -23,16 +21,39 @@ export function useGames() {
   return { games };
 }
 
-// Retorna os jogos melhor avaliados, também embaralhados
-export function useTopRatedGames(limit = 8) {// esse limit = 8 pega os oito melhores mais bem avaliados do site, se eu colocar 8 jogos de 5 estrelas vai aparecer apenas esses 8, portanto posso sim ou não aumentar a lista
+export function useTopRatedGames(limit = 8) {
   const [topGames, setTopGames] = useState([]);
 
   useEffect(() => {
     const allGames = getAllGames();
-    const sorted = [...allGames].sort((a, b) => b.rating - a.rating); //coloca os de maior nota primeiro esse sort vai ordenar
+    const sorted = [...allGames].sort((a, b) => b.rating - a.rating);
     const topSlice = sorted.slice(0, limit);
     setTopGames(shuffleArray(topSlice));
   }, [limit]);
 
   return { topGames };
+}
+
+export function useGameSearch(query, debounceMs = 300) {
+  const [results, setResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
+
+  const runSearch = useCallback((searchQuery) => {
+    if (!searchQuery.trim()) {
+      setResults([]);
+      setIsSearching(false);
+      return;
+    }
+    setIsSearching(true);
+    const found = searchGames(searchQuery);
+    setResults(found);
+    setIsSearching(false);
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => runSearch(query), debounceMs);
+    return () => clearTimeout(timer);
+  }, [query, debounceMs, runSearch]);
+
+  return { results, isSearching };
 }

@@ -20,7 +20,7 @@ export function Header() {
         {/* Logo */}
         <Link to="/" className={styles.logoLink} aria-label="GameoP - Página inicial">
           <img src="/logo.png" alt="GameoP" className={styles.logoImage} />
-          <span className={styles.logoText}>GameoP</span>
+          <span className={styles.logoText}></span>
         </Link>
 
         {/* Navegação */}
@@ -28,6 +28,7 @@ export function Header() {
           <Link to="/games" className={styles.navLink}>Jogos</Link>
           <Link to="/lists" className={styles.navLink}>Listas</Link>
           <Link to="/gamelist" className={styles.navLink}>Gamelist</Link>
+          <Link to="reviews" className={styles.navLink} >Reviews</Link>
         </nav>
 
         {/* Busca */}

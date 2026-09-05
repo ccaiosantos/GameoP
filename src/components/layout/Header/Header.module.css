@@ -7,8 +7,6 @@
   height: var(--header-height);
   background: rgba(13, 11, 30, 0.85);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .inner {
@@ -24,20 +22,14 @@
   align-items: center;
   gap: var(--spacing-sm);
   flex-shrink: 0;
+  height: 100%; /* herda a altura do .inner */
 }
 
 .logoImage {
-  height: 36px;
+  height: 100%; /* ~55% da altura do header — ajuste conforme necessário */
   width: auto;
+  object-fit: contain;
 }
-
-.logoText {
-  font-size: var(--font-size-xl);
-  font-weight: 800;
-  color: var(--color-text-primary);
-  letter-spacing: -0.02em;
-}
-
 /* Nav */
 .nav {
   display: flex;

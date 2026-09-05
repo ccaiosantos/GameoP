@@ -10,25 +10,25 @@ export function Home() {
   // Pega os 2 jogos mais bem avaliados para a seção de reviews
   const featuredReviews = [...games]
     .sort((a, b) => b.rating - a.rating)
-    .slice(0, 4);
+    .slice(0, 6 );
 
   return (
     <main className={styles.page}>
-      {/* ── Seção: Mais jogados da semana ── */}
+      {/*Seção: Mais jogados da semana*/}
       <section className={styles.carouselSection}>
         <div className="container">
           <GameCarousel title="Mais Jogados da Semana" games={games} />
         </div>
       </section>
 
-      {/* ── Seção: Melhores avaliados ── */}
+      {/*Seção: Melhores avaliados*/}
       <section className={styles.carouselSection}>
         <div className="container">
           <GameCarousel title="Melhores Avaliados" games={topGames} />
         </div>
       </section>
 
-      {/* ── Seção: Reviews em destaque ── */}
+      {/*Seção: Reviews em destaque*/}
       {featuredReviews.length > 0 && (
         <section className={styles.reviewsSection}>
           <div className="container">
