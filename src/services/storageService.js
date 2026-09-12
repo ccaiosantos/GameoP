@@ -16,11 +16,14 @@ export function getAllGames() {
   return stored ? JSON.parse(stored) : [];
 }
 
+<<<<<<< HEAD
 export function getGameById(gameId) {
   const games = getAllGames();
   return games.find((game) => String(game.id) === String(gameId)) || null;
 }
 
+=======
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 export function searchGames(query){
     if(!query || query.trim() === "")return [];
     const normalized = query.toLowerCase().trim();

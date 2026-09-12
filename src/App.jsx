@@ -5,10 +5,13 @@ import { Home } from "./pages/Home/Home";
 import { Search } from "./pages/Search/Search";
 import { seedGamesIfEmpty } from "./services/storageService";
 import { Games } from "./pages/Games/Games";
+<<<<<<< HEAD
 import { Game } from "./pages/Game/GameReview";
 import { Login } from "./pages/Login/Login";
 import { MyReviews } from "./pages/MyReviews/MyReviews";
 import { AuthProvider } from "./context/AuthProvider";
+=======
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 
 function ComingSoon({ pageName }) {
   return (
@@ -26,6 +29,7 @@ export function App() {
 
   return (
     <BrowserRouter>
+<<<<<<< HEAD
       <AuthProvider>
         <Header />
         <Routes>
@@ -40,6 +44,19 @@ export function App() {
           <Route path="/profile" element={<ComingSoon pageName="Perfil" />} />
         </Routes>
       </AuthProvider>
+=======
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/games" element={<Games/>} />
+        <Route path="/game/:gameId" element={<ComingSoon pageName="Detalhe do Jogo" />} />
+        <Route path="/reviews" element={<ComingSoon pageName="Suas Reviews" />} />  
+        <Route path="/lists" element={<ComingSoon pageName="Listas" />} />
+        <Route path="/gamelist" element={<ComingSoon pageName="Gamelist" />} />
+        <Route path="/profile" element={<ComingSoon pageName="Perfil" />} />
+      </Routes>
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
     </BrowserRouter>
   );
 }

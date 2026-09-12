@@ -7,13 +7,20 @@
   height: var(--header-height);
   background: rgba(13, 11, 30, 0.85);
   backdrop-filter: blur(16px);
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 }
 
 .inner {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   gap: 2rem;
+=======
+  gap: var(--spacing-xl);
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
   height: 100%;
 }
 
@@ -23,6 +30,7 @@
   align-items: center;
   gap: var(--spacing-sm);
   flex-shrink: 0;
+<<<<<<< HEAD
   height: 100%;
 }
 
@@ -32,25 +40,50 @@
   object-fit: contain;
 }
 
+=======
+  height: 100%; /* herda a altura do .inner */
+}
+
+.logoImage {
+  height: 100%; /* ~55% da altura do header — ajuste conforme necessário */
+  width: auto;
+  object-fit: contain;
+}
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 /* Nav */
 .nav {
   display: flex;
   align-items: center;
   gap: var(--spacing-xl);
+<<<<<<< HEAD
   margin-left: 2rem;
+=======
+  margin-left: var(--spacing-xl);
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 }
 
 .navLink {
   font-size: var(--font-size-sm);
   font-weight: 600;
+<<<<<<< HEAD
   color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+=======
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color var(--transition-fast);
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
   padding: var(--spacing-xs) 0;
   position: relative;
 }
 
 .navLink::after {
+<<<<<<< HEAD
+=======
+  content: "";
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
   position: absolute;
   bottom: 0;
   left: 0;
@@ -58,13 +91,25 @@
   height: 2px;
   background: var(--gradient-primary);
   border-radius: var(--radius-full);
+<<<<<<< HEAD
   transition: 1ms
+=======
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 }
 
 .navLink:hover {
   color: var(--color-text-primary);
 }
 
+<<<<<<< HEAD
+=======
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 /* Busca */
 .searchForm {
   display: flex;
@@ -74,11 +119,19 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   overflow: hidden;
+<<<<<<< HEAD
   transition: 1ms
+=======
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 }
 
 .searchForm:focus-within {
   border-color: var(--color-primary);
+<<<<<<< HEAD
+=======
+  box-shadow: var(--shadow-primary);
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 }
 
 .searchInput {
@@ -114,6 +167,7 @@
 .searchButton:hover {
   color: var(--color-primary-light);
 }
+<<<<<<< HEAD
 
 /* Conta */
 .account {
@@ -159,3 +213,5 @@
 .loginLink:hover {
   opacity: 0.9;
 }
+=======
+>>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
