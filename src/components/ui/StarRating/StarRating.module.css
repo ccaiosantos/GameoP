@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.star {
+  color: var(--color-star-empty);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  padding: 0;
+  line-height: 1;
+  cursor: default;
+}
+
+.star.filled {
+  color: var(--color-star);
+}
+
+.star.half {
+  color: var(--color-star);
+  opacity: 0.5;
+}
+
+/* Tamanhos */
+.sm .star { font-size: 0.85rem; }
+.md .star { font-size: 1.1rem; }
+.lg .star { font-size: 1.5rem; }
+
+/* Interativo */
+.interactive .star {
+  cursor: pointer;
+}
+
+.interactive .star:hover,
+.interactive .star:hover ~ .star {
+  transform: scale(1.2);
+}
+
+.value {
+  margin-left: 6px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}

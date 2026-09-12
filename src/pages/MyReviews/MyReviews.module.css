@@ -1,0 +1,74 @@
+.page {
+  padding-top: calc(var(--header-height) + var(--spacing-2xl));
+  padding-bottom: var(--spacing-3xl);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.emptyState {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 640px;
+}
+
+.editingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.editingHeader {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.editingGameTitle {
+  font-weight: 700;
+  color: var(--color-primary-light);
+}
+
+.editingGameTitle:hover {
+  color: var(--color-text-primary);
+}
+
+.loginPrompt {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  max-width: 640px;
+}
+
+.loginLink {
+  color: var(--color-primary-light);
+  font-weight: 700;
+}
+
+.loginLink:hover {
+  color: var(--color-text-primary);
+}

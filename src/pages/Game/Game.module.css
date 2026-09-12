@@ -1,0 +1,218 @@
+.notFound {
+  padding-top: calc(var(--header-height) + var(--spacing-3xl));
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.page {
+  min-height: 100vh;
+}
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  margin-top: var(--header-height);
+  background: var(--color-surface);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: heroFadeIn var(--transition-slow) ease forwards;
+}
+/* Quando a imagem "oficial" de fundo está quebrada, usamos a capa do jogo
+   desfocada e escurecida no lugar dela, ainda com o degradê por cima. */
+.heroBgFallback {
+  transform: scale(1.2);
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.heroGradient {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hero);
+}
+
+.content {
+  position: relative;
+  margin-top: -140px;
+  padding-bottom: var(--spacing-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.headerRow {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-end;
+}
+
+.poster {
+  width: 220px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-hover);
+  flex-shrink: 0;
+  border: 2px solid var(--color-border);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+}
+
+.title {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.genreList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.genreTag {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: rgb(167, 19, 226);
+  background: rgba(124, 58, 237, 0.12);
+  border-radius: 5px;
+  padding: 2px var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ratingsRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-sm);
+}
+
+.ratingBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ratingHint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.gamelistButton {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  transition: 1ms;
+}
+
+.gamelistButton:hover {
+  background-color: var(--color-primary);
+}
+
+.gamelistFeedback {
+  font-size: var(--font-size-xs);
+}
+
+.description {
+  max-width: 760px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  font-size: var(--font-size-base);
+}
+
+.reviewSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 760px;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ownReviewSummary {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.loginPrompt {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.loginLink {
+  color: var(--color-primary-light);
+  font-weight: 700;
+}
+
+.loginLink:hover {
+  color: var(--color-text-primary);
+}
+
+.emptyReviews {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.reviewsList {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0 var(--spacing-md);
+}
+
+@media (max-width: 640px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .poster {
+    width: 160px;
+  }
+
+  .content {
+    margin-top: -80px;
+  }
+}
