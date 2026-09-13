@@ -1,23 +1,17 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-<<<<<<< HEAD
 import { useAuth } from "../../../hooks/useAuth";
-=======
->>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 import styles from "./Header.module.css";
 
 export function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
-<<<<<<< HEAD
   const { user, logout } = useAuth();
 
   function handleLogout() {
     logout();
     navigate("/");
   }
-=======
->>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
 
   function handleSearchSubmit(event) {
     event.preventDefault();
@@ -61,7 +55,6 @@ export function Header() {
             </svg>
           </button>
         </form>
-<<<<<<< HEAD
 
         {/* Conta */}
         <div className={styles.account}>
@@ -76,8 +69,6 @@ export function Header() {
             <Link to="/login" className={styles.loginLink}>Entrar</Link>
           )}
         </div>
-=======
->>>>>>> a1accea08ee34d94394533fa32c4d0e8ac42b083
       </div>
     </header>
   );
