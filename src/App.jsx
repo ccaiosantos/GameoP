@@ -8,6 +8,7 @@ import { Games } from "./pages/Games/Games";
 import { Game } from "./pages/Game/GameReview";
 import { Login } from "./pages/Login/Login";
 import { MyReviews } from "./pages/MyReviews/MyReviews";
+import { Gamelist } from "./pages/Gamelist/Gamelist";
 import { AuthProvider } from "./context/AuthProvider";
 
 function ComingSoon({ pageName }) {
@@ -36,7 +37,7 @@ export function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/reviews" element={<MyReviews />} />  
           <Route path="/lists" element={<ComingSoon pageName="Listas" />} />
-          <Route path="/gamelist" element={<ComingSoon pageName="Gamelist" />} />
+          <Route path="/gamelist" element={<Gamelist />} />
           <Route path="/profile" element={<ComingSoon pageName="Perfil" />} />
         </Routes>
       </AuthProvider>
