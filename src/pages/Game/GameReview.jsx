@@ -11,17 +11,17 @@ import {
   getReviewsByGame,
   getUserReviewForGame,
 } from "../../services/reviewService";
-import { addToGamelist } from "../../services/gamelistService";
+import { useGamelist } from "../../hooks/useGamelist";
 import styles from "./Game.module.css";
 
 export function Game() {
   const { gameId } = useParams();
   const { user } = useAuth();
+  const { toggleGame, isInGamelist } = useGamelist();
 
   const [game, setGame] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [isEditingReview, setIsEditingReview] = useState(false);
-  const [gamelistFeedback, setGamelistFeedback] = useState("");
   const [heroImage, setHeroImage] = useState(null);
   const [heroIsFallback, setHeroIsFallback] = useState(false);
 
@@ -100,11 +100,12 @@ export function Game() {
     refreshReviews();
   }
 
-  function handleAddToGamelist() {
-    addToGamelist(game.id, user?.id);
-    setGamelistFeedback("Em breve você poderá organizar seus jogos em listas!");
-    setTimeout(() => setGamelistFeedback(""), 3000);
-  }
+  const inGamelist = user ? isInGamelist(game.id) : false;
+
+  function handleToggleGamelist() {
+    if (!user) return;
+    toggleGame(game.id);
+}
 
   return (
     <main className={styles.page}>
@@ -159,10 +160,15 @@ export function Game() {
             </div>
 
             <div className={styles.actions}>
-              <button type="button" onClick={handleAddToGamelist} className={styles.gamelistButton}>
-                + Adicionar à Gamelist
-              </button>
-              {gamelistFeedback && <span className={styles.gamelistFeedback}>{gamelistFeedback}</span>}
+               {user ? (
+                <button type="button" onClick={handleToggleGamelist} className={styles.gamelistButton}>
+                  {inGamelist ? "✓ Na Gamelist" : "+ Adicionar à Gamelist"}
+                </button>
+              ) : (
+                <Link to="/login" state={{ from: `/game/${game.id}` }} className={styles.gamelistButton}>
+                  + Adicionar à Gamelist
+                </Link>
+               )}
             </div>
           </div>
         </div>
