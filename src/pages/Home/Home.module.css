@@ -1,13 +1,13 @@
 .page {
-  padding-top: calc(var(--header-height) + var(--spacing-2xl));
-  padding-bottom: var(--spacing-3xl);
+  padding-top: calc(64px + 3rem);
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-3xl);
+  gap: 4rem;
 }
 
 .carouselSection {
-  padding: 0 var(--spacing-lg);
+  padding: 0 1.5rem;
 }
 
 .reviewsSection {
@@ -15,14 +15,14 @@
 }
 
 .reviewsTitle {
-  font-size: var(--font-size-lg);
+  font-size: 1.125rem;
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: #f1f0fb;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   position: relative;
-  padding-left: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .reviewsTitle::before {
@@ -32,12 +32,12 @@
   top: 10%;
   height: 80%;
   width: 3px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  background: linear-gradient(135deg, #7c3aed, #9d5cf0);
   border-radius: 9999px;
 }
 
 .reviewsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: var(--spacing-lg);
+  gap: 1.5rem;
 }

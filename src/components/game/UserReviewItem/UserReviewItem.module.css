@@ -1,8 +1,8 @@
 .card {
   display: flex;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md);
-  border-bottom: 1px solid var(--color-border);
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #2a2550;
 }
 
 .card:last-child {
@@ -13,14 +13,14 @@
   flex-shrink: 0;
   width: 36px;
   height: 36px;
-  border-radius: var(--radius-full);
-  background: var(--gradient-primary);
-  color: var(--color-text-primary);
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #7c3aed, #9d5cf0);
+  color: #f1f0fb;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
 }
 
 .content {
@@ -28,55 +28,55 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: 0.25rem;
 }
 
 .headerRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-sm);
+  gap: 0.5rem;
 }
 
 .username {
   font-weight: 700;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  color: #f1f0fb;
 }
 
 .date {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  color: #6b6890;
   flex-shrink: 0;
 }
 
 .comment {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  color: #a09cbf;
   line-height: 1.6;
   white-space: pre-wrap;
 }
 
 .actions {
   display: flex;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-xs);
+  gap: 1rem;
+  margin-top: 0.25rem;
 }
 
 .actionButton {
-  font-size: var(--font-size-xs);
+  font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-primary-light);
+  color: #9d5cf0;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .actionButton:hover {
-  color: var(--color-text-primary);
+  color: #f1f0fb;
 }
 
 .actionButtonDanger {
-  font-size: var(--font-size-xs);
+  font-size: 0.75rem;
   font-weight: 600;
   color: #f87171;
   text-transform: uppercase;

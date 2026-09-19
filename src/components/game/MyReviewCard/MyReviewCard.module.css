@@ -1,15 +1,15 @@
 .card {
   display: flex;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  transition: border-color var(--transition-base);
+  gap: 1rem;
+  padding: 1rem;
+  background: #161230;
+  border: 1px solid #2a2550;
+  border-radius: 16px;
+  transition: border-color 250ms ease;
 }
 
 .card:hover {
-  border-color: var(--color-primary-dark);
+  border-color: #5b21b6;
 }
 
 .coverLink {
@@ -20,14 +20,14 @@
   width: 72px;
   height: 100px;
   object-fit: cover;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-card);
+  border-radius: 6px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: 0.25rem;
   flex: 1;
   min-width: 0;
 }
@@ -36,7 +36,7 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  gap: var(--spacing-sm);
+  gap: 0.5rem;
 }
 
 .titleLink {
@@ -44,53 +44,53 @@
 }
 
 .title {
-  font-size: var(--font-size-base);
+  font-size: 1rem;
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: #f1f0fb;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .title:hover {
-  color: var(--color-primary-light);
+  color: #9d5cf0;
 }
 
 .date {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  color: #6b6890;
   flex-shrink: 0;
 }
 
 .comment {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  color: #a09cbf;
   line-height: 1.6;
-  margin-top: var(--spacing-xs);
+  margin-top: 0.25rem;
   white-space: pre-wrap;
 }
 
 .actions {
   display: flex;
-  gap: var(--spacing-md);
+  gap: 1rem;
   margin-top: auto;
-  padding-top: var(--spacing-xs);
+  padding-top: 0.25rem;
 }
 
 .actionButton {
-  font-size: var(--font-size-xs);
+  font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-primary-light);
+  color: #9d5cf0;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .actionButton:hover {
-  color: var(--color-text-primary);
+  color: #f1f0fb;
 }
 
 .actionButtonDanger {
-  font-size: var(--font-size-xs);
+  font-size: 0.75rem;
   font-weight: 600;
   color: #f87171;
   text-transform: uppercase;

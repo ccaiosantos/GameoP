@@ -15,7 +15,7 @@ import { AuthProvider } from "./context/AuthProvider";
 
 function ComingSoon({ pageName }) {
   return (
-    <main style={{ paddingTop: "120px", textAlign: "center", color: "var(--color-text-secondary)" }}>
+    <main style={{ paddingTop: "120px", textAlign: "center", color: "#a09cbf" }}>
       <h2 style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>{pageName}</h2>
       <p>Em breve</p>
     </main>

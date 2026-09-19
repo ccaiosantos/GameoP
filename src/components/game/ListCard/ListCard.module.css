@@ -1,16 +1,16 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md);
-  transition: border-color var(--transition-fast), transform var(--transition-base);
+  gap: 1rem;
+  background: #161230;
+  border: 1px solid #2a2550;
+  border-radius: 16px;
+  padding: 1rem;
+  transition: border-color 150ms ease, transform 250ms ease;
 }
 
 .card:hover {
-  border-color: var(--color-primary);
+  border-color: #7c3aed;
   transform: translateY(-4px);
 }
 
@@ -20,8 +20,8 @@
   gap: 4px;
   height: 88px;
   overflow: hidden;
-  border-radius: var(--radius-sm);
-  background: var(--color-surface-elevated);
+  border-radius: 6px;
+  background: #1e1a3a;
 }
 
 .cover {
@@ -32,7 +32,7 @@
 
 .emptyCover {
   grid-column: 1 / -1;
-  background: var(--color-surface-elevated);
+  background: #1e1a3a;
 }
 
 .info {
@@ -43,17 +43,17 @@
 }
 
 .name {
-  font-size: var(--font-size-lg);
+  font-size: 1.125rem;
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: #f1f0fb;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .description {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  color: #a09cbf;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -61,6 +61,6 @@
 }
 
 .count {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  color: #6b6890;
 }
