@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: 100;
-  height: var(--header-height);
+  height: 64px;
   background: rgba(13, 11, 30, 0.85);
   backdrop-filter: blur(16px);
 
@@ -21,7 +21,7 @@
 .logoLink {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: 0.5rem;
   flex-shrink: 0;
   height: 100%;
 }
@@ -36,17 +36,17 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xl);
+  gap: 2rem;
   margin-left: 2rem;
 }
 
 .navLink {
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: #7c3aed;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: var(--spacing-xs) 0;
+  padding: 0.25rem 0;
   position: relative;
 }
 
@@ -56,13 +56,13 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--gradient-primary);
-  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #7c3aed, #9d5cf0);
+  border-radius: 9999px;
   transition: 1ms
 }
 
 .navLink:hover {
-  color: var(--color-text-primary);
+  color: #f1f0fb;
 }
 
 /* Busca */
@@ -70,29 +70,29 @@
   display: flex;
   align-items: center;
   margin-left: auto;
-  background: var(--color-surface-elevated);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
+  background: #1e1a3a;
+  border: 1px solid #2a2550;
+  border-radius: 9999px;
   overflow: hidden;
   transition: 1ms
 }
 
 .searchForm:focus-within {
-  border-color: var(--color-primary);
+  border-color: #7c3aed;
 }
 
 .searchInput {
   background: transparent;
   border: none;
   outline: none;
-  color: var(--color-text-primary);
-  font-size: var(--font-size-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
+  color: #f1f0fb;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
   width: 200px;
 }
 
 .searchInput::placeholder {
-  color: var(--color-text-muted);
+  color: #6b6890;
 }
 
 /* Remove o ícone nativo do tipo search */
@@ -106,53 +106,53 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  color: var(--color-text-muted);
-  transition: color var(--transition-fast);
+  color: #6b6890;
+  transition: color 150ms ease;
   flex-shrink: 0;
 }
 
 .searchButton:hover {
-  color: var(--color-primary-light);
+  color: #9d5cf0;
 }
 
 /* Conta */
 .account {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  margin-left: var(--spacing-lg);
+  gap: 1rem;
+  margin-left: 1.5rem;
   flex-shrink: 0;
 }
 
 .accountName {
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-text-primary);
+  color: #f1f0fb;
 }
 
 .accountName:hover {
-  color: var(--color-primary-light);
+  color: #9d5cf0;
 }
 
 .logoutButton {
-  font-size: var(--font-size-xs);
+  font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: #6b6890;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 .logoutButton:hover {
-  color: var(--color-text-primary);
+  color: #f1f0fb;
 }
 
 .loginLink {
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   font-weight: 700;
-  color: var(--color-text-primary);
-  background: var(--gradient-primary);
-  padding: var(--spacing-xs) var(--spacing-lg);
-  border-radius: var(--radius-full);
+  color: #f1f0fb;
+  background: linear-gradient(135deg, #7c3aed, #9d5cf0);
+  padding: 0.25rem 1.5rem;
+  border-radius: 9999px;
   transition: 1ms
 }
 

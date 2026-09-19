@@ -5,19 +5,19 @@
 }
 
 .star {
-  color: var(--color-star-empty);
-  transition: color var(--transition-fast), transform var(--transition-fast);
+  color: #3d3660;
+  transition: color 150ms ease, transform 150ms ease;
   padding: 0;
   line-height: 1;
   cursor: default;
 }
 
 .star.filled {
-  color: var(--color-star);
+  color: #f59e0b;
 }
 
 .star.half {
-  color: var(--color-star);
+  color: #f59e0b;
   opacity: 0.5;
 }
 
@@ -38,7 +38,7 @@
 
 .value {
   margin-left: 6px;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  color: #a09cbf;
   font-weight: 600;
 }

@@ -1,7 +1,7 @@
 .notFound {
-  padding-top: calc(var(--header-height) + var(--spacing-3xl));
+  padding-top: calc(64px + 4rem);
   text-align: center;
-  color: var(--color-text-secondary);
+  color: #a09cbf;
 }
 
 .page {
@@ -11,8 +11,8 @@
   position: relative;
   height: 60vh;
   overflow: hidden;
-  margin-top: var(--header-height);
-  background: var(--color-surface);
+  margin-top: 64px;
+  background: #161230;
 }
 
 .heroBg {
@@ -21,7 +21,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  animation: heroFadeIn var(--transition-slow) ease forwards;
+  animation: heroFadeIn 400ms ease ease forwards;
 }
 /* Quando a imagem "oficial" de fundo está quebrada, usamos a capa do jogo
    desfocada e escurecida no lugar dela, ainda com o degradê por cima. */
@@ -37,21 +37,21 @@
 .heroGradient {
   position: absolute;
   inset: 0;
-  background: var(--gradient-hero);
+  background: linear-gradient(to bottom, transparent 0%, rgba(13, 11, 30, 0.6) 40%, rgba(13, 11, 30, 0.92) 70%, #0d0b1e 100%);
 }
 
 .content {
   position: relative;
   margin-top: -140px;
-  padding-bottom: var(--spacing-3xl);
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2xl);
+  gap: 3rem;
 }
 
 .headerRow {
   display: flex;
-  gap: var(--spacing-xl);
+  gap: 2rem;
   align-items: flex-end;
 }
 
@@ -59,44 +59,44 @@
   width: 220px;
   aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-hover);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
   flex-shrink: 0;
-  border: 2px solid var(--color-border);
+  border: 2px solid #2a2550;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
-  padding-bottom: var(--spacing-sm);
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .title {
-  font-size: var(--font-size-4xl);
+  font-size: 2.5rem;
   font-weight: 800;
-  color: var(--color-text-primary);
+  color: #f1f0fb;
 }
 
 .meta {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  color: #a09cbf;
 }
 
 .genreList {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-xs);
+  gap: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .genreTag {
-  font-size: var(--font-size-xs);
+  font-size: 0.75rem;
   font-weight: 600;
   color: rgb(167, 19, 226);
   background: rgba(124, 58, 237, 0.12);
   border-radius: 5px;
-  padding: 2px var(--spacing-sm);
+  padding: 2px 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -104,7 +104,7 @@
 .ratingsRow {
   display: flex;
   flex-wrap: wrap;
-  margin-top: var(--spacing-sm);
+  margin-top: 0.5rem;
 }
 
 .ratingBlock {
@@ -114,92 +114,92 @@
 }
 
 .ratingHint {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  color: #6b6890;
 }
 
 .actions {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-md);
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .gamelistButton {
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   font-weight: 700;
-  color: var(--color-text-primary);
-  background: var(--color-surface-elevated);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-full);
-  padding: var(--spacing-sm) var(--spacing-lg);
+  color: #f1f0fb;
+  background: #1e1a3a;
+  border: 1px solid #2a2550;
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
   transition: 1ms;
 }
 
 .gamelistButton:hover {
-  background-color: var(--color-primary);
+  background-color: #7c3aed;
 }
 
 .gamelistFeedback {
-  font-size: var(--font-size-xs);
+  font-size: 0.75rem;
 }
 
 .description {
   max-width: 760px;
-  color: var(--color-text-secondary);
+  color: #a09cbf;
   line-height: 1.7;
-  font-size: var(--font-size-base);
+  font-size: 1rem;
 }
 
 .reviewSection {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 1rem;
   max-width: 760px;
 }
 
 .sectionTitle {
-  font-size: var(--font-size-lg);
+  font-size: 1.125rem;
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: #f1f0fb;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 
 .ownReviewSummary {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  background: #161230;
+  border: 1px solid #2a2550;
+  border-radius: 16px;
 }
 
 .loginPrompt {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
+  background: #161230;
+  border: 1px solid #2a2550;
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: #a09cbf;
+  font-size: 0.875rem;
 }
 
 .loginLink {
-  color: var(--color-primary-light);
+  color: #9d5cf0;
   font-weight: 700;
 }
 
 .loginLink:hover {
-  color: var(--color-text-primary);
+  color: #f1f0fb;
 }
 
 .emptyReviews {
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+  color: #6b6890;
+  font-size: 0.875rem;
 }
 
 .reviewsList {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 0 var(--spacing-md);
+  background: #161230;
+  border: 1px solid #2a2550;
+  border-radius: 16px;
+  padding: 0 1rem;
 }
 
 @media (max-width: 640px) {

@@ -1,6 +1,6 @@
 .page {
-  padding-top: calc(var(--header-height) + var(--spacing-2xl));
-  padding-bottom: var(--spacing-3xl);
+  padding-top: calc(64px + 3rem);
+  padding-bottom: 4rem;
   min-height: 100vh;
 }
 
@@ -8,43 +8,43 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-sm);
+  gap: 1rem;
+  margin-bottom: 0.5rem;
   flex-wrap: wrap;
 }
 
 .headerText {
   display: flex;
   align-items: baseline;
-  gap: var(--spacing-md);
+  gap: 1rem;
 }
 
 .title {
-  font-size: var(--font-size-2xl);
+  font-size: 1.5rem;
   font-weight: 800;
-  color: var(--color-text-primary);
+  color: #f1f0fb;
 }
 
 .count {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  color: #6b6890;
 }
 
 .subtitle {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-xl);
+  font-size: 0.875rem;
+  color: #a09cbf;
+  margin-bottom: 2rem;
   max-width: 560px;
 }
 
 .createButton {
-  background: var(--gradient-primary);
-  color: var(--color-text-primary);
+  background: linear-gradient(135deg, #7c3aed, #9d5cf0);
+  color: #f1f0fb;
   font-weight: 700;
-  font-size: var(--font-size-sm);
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border-radius: var(--radius-full);
-  transition: opacity var(--transition-fast);
+  font-size: 0.875rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  transition: opacity 150ms ease;
 }
 
 .createButton:hover {
@@ -52,42 +52,42 @@
 }
 
 .formWrapper {
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: 3rem;
   max-width: 720px;
 }
 
 .formTitle {
-  font-size: var(--font-size-lg);
+  font-size: 1.125rem;
   font-weight: 700;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: 1rem;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: var(--spacing-lg);
+  gap: 1.5rem;
 }
 
 .emptyState {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
+  color: #a09cbf;
+  font-size: 0.875rem;
 }
 
 .loginPrompt {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
+  background: #161230;
+  border: 1px solid #2a2550;
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: #a09cbf;
+  font-size: 0.875rem;
   max-width: 640px;
 }
 
 .loginLink {
-  color: var(--color-primary-light);
+  color: #9d5cf0;
   font-weight: 700;
 }
 
 .loginLink:hover {
-  color: var(--color-text-primary);
+  color: #f1f0fb;
 }

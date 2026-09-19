@@ -1,5 +1,3 @@
-@import './variables.css';
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -11,10 +9,10 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
-  background-color: var(--color-background);
-  color: var(--color-text-primary);
-  font-size: var(--font-size-base);
+  font-family: "Inter", sans-serif;
+  background-color: #0d0b1e;
+  color: #f1f0fb;
+  font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,23 +46,23 @@ ul, ol {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-surface);
+  background: #161230;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-primary-dark);
-  border-radius: var(--radius-full);
+  background: #5b21b6;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary);
+  background: #7c3aed;
 }
 
 /* Utilitários */
 .container {
-  max-width: var(--max-width);
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 var(--spacing-xl);
+  padding: 0 2rem;
 }
 
 .visually-hidden {
