@@ -45,6 +45,12 @@ export function getReviewsByUser(userId) {
     .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
 }
 
+export function getRecentReviews(limit = 6) {
+  return getAllReviews()
+    .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt))
+    .slice(0, limit);
+}
+
 // Cria ou atualiza (se o usuário já tiver avaliado esse jogo) uma avaliação.
 export function upsertReview({ gameId, userId, username, rating, comment }) {
   if (!userId) {

@@ -24,14 +24,25 @@ export function getListsByUser(userId) {
     .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt));
 }
 
-export function getListById(listId, userId) {
+export function getListById(listId) {
+  if (!listId) return null;
+  return getAllLists().find((list) => list.id === listId) || null;
+}
+
+export function getOwnedList(listId, userId) {
   if (!listId || !userId) return null;
   return (
     getAllLists().find((list) => list.id === listId && list.userId === userId) || null
   );
 }
 
-export function createList({ name, description, gameIds, userId }) {
+export function getRecentLists(limit = 6) {
+  return getAllLists()
+    .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt))
+    .slice(0, limit);
+}
+
+export function createList({ name, description, gameIds, userId, username }) {
   if (!userId) {
     throw new Error("É necessário estar logado para criar uma lista.");
   }
@@ -50,6 +61,7 @@ export function createList({ name, description, gameIds, userId }) {
   const newList = {
     id: uid(),
     userId,
+    username: username || "",
     name: trimmedName,
     description: description?.trim() || "",
     gameIds: uniqueGameIds,
@@ -104,7 +116,7 @@ export function deleteList(listId, userId) {
 }
 
 export function addGameToList(listId, userId, gameId) {
-  const list = getListById(listId, userId);
+  const list = getOwnedList(listId, userId);
   if (!list) {
     throw new Error("Lista não encontrada.");
   }
@@ -119,7 +131,7 @@ export function addGameToList(listId, userId, gameId) {
 }
 
 export function removeGameFromList(listId, userId, gameId) {
-  const list = getListById(listId, userId);
+  const list = getOwnedList(listId, userId);
   if (!list) {
     throw new Error("Lista não encontrada.");
   }
