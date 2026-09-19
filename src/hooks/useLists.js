@@ -22,7 +22,13 @@ export function useLists() {
 
   function addList({ name, description, gameIds }) {
     if (!user) return null;
-    const created = createList({ name, description, gameIds, userId: user.id });
+    const created = createList({
+      name,
+      description,
+      gameIds,
+      userId: user.id,
+      username: user.username,
+    });
     refresh();
     return created;
   }
@@ -41,7 +47,7 @@ export function useLists() {
   }
 
   function findList(listId) {
-    return user ? getListById(listId, user.id) : null;
+    return getListById(listId);
   }
 
   return { lists, addList, editList, removeList, findList, refresh };

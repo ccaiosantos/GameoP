@@ -25,6 +25,9 @@ export function ListCard({ list }) {
 
       <div className={styles.info}>
         <h3 className={styles.name}>{list.name}</h3>
+        {list.username ? (
+          <span className={styles.author}>por {list.username}</span>
+        ) : null}
         {list.description ? (
           <p className={styles.description}>{list.description}</p>
         ) : null}

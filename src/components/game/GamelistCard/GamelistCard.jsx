@@ -23,15 +23,17 @@ export function GamelistCard({ game, onRemove, removeLabel = "Remover da gamelis
         </div>
       </Link>
 
-      <button
-        type="button"
-        onClick={onRemove}
-        className={styles.removeButton}
-        aria-label={`${removeLabel}: ${game.title}`}
-        title={removeLabel}
-      >
-        ×
-      </button>
+      {onRemove ? (
+        <button
+          type="button"
+          onClick={onRemove}
+          className={styles.removeButton}
+          aria-label={`${removeLabel}: ${game.title}`}
+          title={removeLabel}
+        >
+          ×
+        </button>
+      ) : null}
 
       <div className={styles.info}>
         <Link to={`/game/${game.id}`} className={styles.titleLink}>
