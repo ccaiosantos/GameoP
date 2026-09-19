@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { StarRating } from "../../ui/StarRating/StarRating";
 import styles from "./GamelistCard.module.css";
 
-export function GamelistCard({ game, onRemove }) {
+export function GamelistCard({ game, onRemove, removeLabel = "Remover da gamelist" }) {
   return (
     <div className={styles.card}>
       <Link
@@ -27,8 +27,8 @@ export function GamelistCard({ game, onRemove }) {
         type="button"
         onClick={onRemove}
         className={styles.removeButton}
-        aria-label={`Remover ${game.title} da gamelist`}
-        title="Remover da gamelist"
+        aria-label={`${removeLabel}: ${game.title}`}
+        title={removeLabel}
       >
         ×
       </button>
