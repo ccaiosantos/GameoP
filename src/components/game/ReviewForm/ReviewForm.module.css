@@ -38,7 +38,6 @@
 
 .textarea:focus {
   border-color: #7c3aed;
-  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
 }
 
 .textarea::placeholder {
@@ -61,7 +60,3 @@
   transition: opacity 150ms ease, box-shadow 150ms ease;
 }
 
-.submitButton:hover {
-  opacity: 0.92;
-  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.35);
-}
