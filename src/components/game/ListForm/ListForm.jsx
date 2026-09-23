@@ -83,7 +83,7 @@ export function ListForm({ initialList, onSubmit, onCancel, submitLabel = "Criar
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           className={styles.input}
-          placeholder="Filtrar por nome, gênero ou desenvolvedora..."
+          placeholder="Filtrar por nome ou desenvolvedora..."
           aria-label="Filtrar jogos"
         />
       </div>
