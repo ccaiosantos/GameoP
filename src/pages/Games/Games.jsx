@@ -10,7 +10,6 @@ export function Games() {
       <div className="container">
         <div className={styles.header}>
           <h1 className={styles.title}>Jogos</h1>
-          <span className={styles.count}>{games.length} jogos</span>
         </div>
 
         <div className={styles.grid}>
