@@ -5,7 +5,7 @@
   cursor: pointer;
   flex-shrink: 0;
   width: 140px;
-  transition: transform 250ms ease;
+  transition: 250ms ease;
 }
 
 .card:hover {
@@ -17,8 +17,7 @@
   border-radius: 10px;
   overflow: hidden;
   aspect-ratio: 2 / 3;
-  background: #1e1a3a;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 24px rgba(#1e1a3a 0.5);
 }
 
 .cover {
@@ -61,15 +60,15 @@
 }
 
 .title {
-  font-size: 0.875rem;
+  font-size: 15px;
   font-weight: 600;
   color: #f1f0fb;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+
 }
 
 .year {
   font-size: 0.75rem;
-  color: #6b6890;
+  color: #d9d7ec;
 }

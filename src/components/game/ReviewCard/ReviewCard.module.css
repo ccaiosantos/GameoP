@@ -3,7 +3,6 @@
   gap: 1rem;
   padding: 1rem;
   background: #161230;
-  border: 1px solid #2a2550;
   border-radius: 16px;
   transition: border-color 250ms ease;
 }
@@ -60,12 +59,12 @@
 }
 
 .title:hover {
-  color: #9d5cf0;
+  color: #8f42f3;
 }
 
 .description {
-  font-size: 0.75rem;
-  color: #a09cbf;
+  font-size: 12px;
+  color: #d7d5e4;
   line-height: 1.6;
   margin-top: 0.25rem;
 }

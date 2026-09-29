@@ -5,9 +5,7 @@
   right: 0;
   z-index: 100;
   height: 64px;
-  background: rgba(13, 11, 30, 0.85);
-  backdrop-filter: blur(16px);
-
+  background: rgba(13, 11, 30);
 }
 
 .inner {
@@ -27,7 +25,7 @@
 }
 
 .logoImage {
-  height: 10vh;
+  height: 6vh;
   width: auto;
   object-fit: contain;
 }
@@ -150,9 +148,9 @@
   font-size: 0.875rem;
   font-weight: 700;
   color: #f1f0fb;
-  background: linear-gradient(135deg, #7c3aed, #9d5cf0);
+  background: linear-gradient(100deg, #7c3aed, #1c053a);
   padding: 0.25rem 1.5rem;
-  border-radius: 9999px;
+  border-radius: 50px;
   transition: 1ms
 }
 
