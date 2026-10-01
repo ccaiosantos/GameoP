@@ -107,10 +107,10 @@ A aplicacao estara disponivel em `http://localhost:5173`.
 
 ## Integrantes do Grupo
 
-- Caio Gabriel
-- Caio Marcos
-- Pedro Luckas
-- Victor Alves
+- Caio Gabriel- Scrum Master, Desenvolvedor
+- Caio Marcos- Desenvolvedor
+- Pedro Luckas- Testador, Desenvolvedor
+- Victor Alves- Desenvolvedor
 
 ---
 
